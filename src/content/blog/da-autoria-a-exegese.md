@@ -1,7 +1,7 @@
 ---
 title: "Da Autoria à Exegese: O Código como Ato de Linguagem na Era da IA"
 description: "A IA tornou visível uma dimensão da profissão que sempre subestimamos: a engenharia de software tem uma natureza profundamente linguística."
-pubDate: 2025-04-20
+pubDate: 2026-04-20
 category: "professional"
 lang: "pt"
 tags: ["IA", "carreira", "linguística", "engenharia de software"]

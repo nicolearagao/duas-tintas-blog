@@ -1,7 +1,7 @@
 ---
 title: "How Do You Debug What You Can't Reproduce? An IPv6 case study in minimal test environments"
 description: "Debugging IPv6 connectivity issues without access to the customer's environment using minimal reproducible examples and fault isolation."
-pubDate: 2025-05-30
+pubDate: 2026-05-30
 category: "professional"
 lang: "en"
 tags: ["debugging", "devops", "linux", "IPv6"]
