@@ -5,6 +5,7 @@ pubDate: 2020-10-15
 category: "professional"
 lang: "pt"
 tags: ["inteligência artificial", "NLP", "machine learning"]
+series: "início de jornada"
 ---
 
 > *Post migrado do Medium. Algumas imagens do artigo original não foram transferidas, o que pode afetar a compreensão de trechos específicos.*

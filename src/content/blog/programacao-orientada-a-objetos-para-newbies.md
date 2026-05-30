@@ -5,6 +5,7 @@ pubDate: 2020-08-06
 category: "professional"
 lang: "pt"
 tags: ["java", "POO", "iniciante"]
+series: "início de jornada"
 ---
 
 > *Post migrado do Medium. Algumas imagens do artigo original não foram transferidas, o que pode afetar a compreensão de trechos específicos.*

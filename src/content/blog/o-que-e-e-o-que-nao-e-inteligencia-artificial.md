@@ -5,6 +5,7 @@ pubDate: 2020-10-21
 category: "professional"
 lang: "pt"
 tags: ["inteligência artificial", "iniciante"]
+series: "início de jornada"
 ---
 
 > *Post migrado do Medium. Algumas imagens do artigo original não foram transferidas, o que pode afetar a compreensão de trechos específicos.*

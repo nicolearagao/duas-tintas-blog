@@ -11,6 +11,7 @@ const blog = defineCollection({
     category: z.enum(['personal', 'professional']),
     lang: z.enum(['pt', 'en']).default('pt'),
     tags: z.array(z.string()).default([]),
+    series: z.string().optional(),
     draft: z.boolean().default(false),
   }),
 });

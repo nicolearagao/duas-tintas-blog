@@ -5,6 +5,7 @@ pubDate: 2020-08-12
 category: "professional"
 lang: "pt"
 tags: ["redes", "protocolos", "iniciante"]
+series: "início de jornada"
 ---
 
 > *Post migrado do Medium. Algumas imagens do artigo original não foram transferidas, o que pode afetar a compreensão de trechos específicos.*
