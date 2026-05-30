@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Sobre — duas tintas" description="Sobre Nicole Aragão" currentPath="/sobre" showSidebar={false}>
+  <div class="about-page">
+    <h1>Sobre</h1>
+    <div class="about-content">
+      <p>
+        Sou Nicole Aragão. Sou muitas coisas ao mesmo tempo e me recuso a escolher só algumas.
+      </p>
+      <p>
+        O primeiro grande sonho da minha vida era viajar o mundo - e realizei, através do trabalho
+        em cruzeiros marítimos e uns bons anos vivendo no exterior. Gerenciei operações, restaurantes
+        e equipes multiculturais em alto mar até que a vida me levou para uma carreira improvável:
+        engenharia de software. Acontece que eu sempre fui mais pragmática e mais engenheira do que
+        jamais achei. O resultado é uma desenvolvedora que já foi garçonete, bartender, gerente de
+        hotel, sommelier, professora de inglês e sabe lá mais o quê - uma combinação improvável
+        que de alguma forma funciona.
+      </p>
+      <p>
+        Me interessa resolver problemas de ponta a ponta, entender produto e a importância do
+        software para as pessoas. Ainda acredito em escrever código de pessoas para pessoas -
+        apesar de um mundo cada vez mais construído para máquinas. Gosto de documentar o que
+        aprendo no caminho.
+      </p>
+      <p>
+        Powerlifter, praticante de BJJ, leitora compulsiva, macumbeira, esposa, cozinheira de fim
+        de semana. Morando em Teresópolis, cercada de verde, trabalhando remotamente com times globais.
+      </p>
+
+      <hr />
+
+      <p>
+        Este blog se chama <strong>duas tintas</strong> porque escrevo em dois registros - e em duas línguas.
+      </p>
+      <p>
+        Na <a href="/escrita">Escrita</a>, publico ensaios sobre as ideias malucas que me surgem
+        nas leituras, observações do mundo, as profundezas da psique e a crueza do cotidiano.
+      </p>
+      <p>
+        No <a href="/dev">Dev</a>, escrevo sobre engenharia de software, ferramentas, decisões técnicas
+        e o que aprendo no caminho.
+      </p>
+      <p>
+        Antes, meus textos estavam espalhados entre Substack, Medium e dev.to.
+        Agora vivem aqui. Reunir os pedaços num lugar só também é um jeito de se individuar.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-page {
+    max-width: 650px;
+  }
+
+  .about-page h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .about-content hr {
+    margin: 2.5rem 0;
+  }
+
+  .about-content blockquote {
+    margin-top: 2rem;
+    font-size: 0.95rem;
+  }
+</style>

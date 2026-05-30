@@ -1,0 +1,149 @@
+---
+interface Props {
+  currentPath?: string;
+}
+
+const { currentPath = '' } = Astro.props;
+
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/escrita', label: 'Escrita' },
+  { href: '/dev', label: 'Dev' },
+  { href: '/sobre', label: 'Sobre' },
+];
+---
+
+<header class="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-title">duas tintas</a>
+    <nav class="site-nav">
+      {navLinks.map(link => (
+        <a
+          href={link.href}
+          class:list={['nav-link', { active: currentPath === link.href }]}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+      <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="5"/>
+        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+      </svg>
+      <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<style>
+  .site-header {
+    background-color: var(--color-header-bg);
+    color: var(--color-header-text);
+    padding: 0 1.5rem;
+  }
+
+  .header-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    gap: 2rem;
+  }
+
+  .site-title {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-header-text);
+    text-decoration: none;
+    letter-spacing: -0.02em;
+  }
+
+  .site-title:hover {
+    color: var(--color-header-text);
+    text-decoration: none;
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+  }
+
+  .nav-link {
+    color: var(--color-header-text);
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+  }
+
+  .nav-link:hover,
+  .nav-link.active {
+    opacity: 1;
+    text-decoration: none;
+    color: var(--color-accent);
+  }
+
+  .theme-toggle {
+    background: none;
+    border: none;
+    color: var(--color-header-text);
+    cursor: pointer;
+    padding: 0.4rem;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    display: flex;
+    align-items: center;
+  }
+
+  .theme-toggle:hover {
+    opacity: 1;
+  }
+
+  :global([data-theme="dark"]) .icon-sun {
+    display: block;
+  }
+  :global([data-theme="dark"]) .icon-moon {
+    display: none;
+  }
+
+  .icon-sun {
+    display: none;
+  }
+  .icon-moon {
+    display: block;
+  }
+
+  @media (max-width: 600px) {
+    .site-nav {
+      gap: 1rem;
+    }
+    .nav-link {
+      font-size: 0.75rem;
+    }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('theme-toggle');
+  const root = document.documentElement;
+
+  const stored = localStorage.getItem('theme');
+  if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    root.setAttribute('data-theme', 'dark');
+  }
+
+  toggle?.addEventListener('click', () => {
+    const isDark = root.getAttribute('data-theme') === 'dark';
+    root.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    localStorage.setItem('theme', isDark ? 'light' : 'dark');
+  });
+</script>

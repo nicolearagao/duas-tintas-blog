@@ -1,0 +1,163 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map(post => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, description, pubDate, category, lang, tags } = post.data;
+
+const dateStr = pubDate.toLocaleDateString(lang === 'pt' ? 'pt-BR' : 'en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const categoryLabel = category === 'personal' ? 'Pessoal' : 'Dev';
+const categoryClass = category === 'personal' ? 'cat-personal' : 'cat-professional';
+---
+
+<BaseLayout title={`${title} — duas tintas`} description={description} showSidebar={true}>
+  <article class="post">
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime={pubDate.toISOString()}>{dateStr}</time>
+        <span class:list={['lang-badge', `lang-${lang}`]}>{lang.toUpperCase()}</span>
+        <span class:list={['category-badge', categoryClass]}>{categoryLabel}</span>
+      </div>
+      <h1>{title}</h1>
+      {tags.length > 0 && (
+        <div class="post-tags">
+          {tags.map(tag => <span class="tag">#{tag}</span>)}
+        </div>
+      )}
+    </header>
+    <div class="post-content">
+      <Content />
+    </div>
+  </article>
+  <nav class="post-nav">
+    <a href={category === 'personal' ? '/escrita' : '/dev'}>&larr; Voltar para {category === 'personal' ? 'Escrita' : 'Dev'}</a>
+  </nav>
+</BaseLayout>
+
+<style>
+  .post-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .post-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-heading);
+  }
+
+  .category-badge {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 0.15em 0.5em;
+    border-radius: 3px;
+  }
+
+  .lang-badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 0.15em 0.45em;
+    border-radius: 3px;
+    border: 1.5px solid;
+  }
+
+  .lang-pt {
+    border-color: #16a34a;
+    color: #16a34a;
+  }
+
+  .lang-en {
+    border-color: #7c3aed;
+    color: #7c3aed;
+  }
+
+  :global([data-theme="dark"]) .lang-pt {
+    border-color: #4ade80;
+    color: #4ade80;
+  }
+
+  :global([data-theme="dark"]) .lang-en {
+    border-color: #a78bfa;
+    color: #a78bfa;
+  }
+
+  .cat-personal {
+    background: #fef3c7;
+    color: #92400e;
+  }
+
+  :global([data-theme="dark"]) .cat-personal {
+    background: #78350f;
+    color: #fef3c7;
+  }
+
+  .cat-professional {
+    background: #dbeafe;
+    color: #1e40af;
+  }
+
+  :global([data-theme="dark"]) .cat-professional {
+    background: #1e3a5f;
+    color: #bfdbfe;
+  }
+
+  .post-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-heading);
+  }
+
+  .post-content {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .post-content :global(h2) {
+    margin-top: 2rem;
+  }
+
+  .post-content :global(h3) {
+    margin-top: 1.5rem;
+  }
+
+  .post-nav {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+  }
+</style>

@@ -1,0 +1,115 @@
+---
+interface Props {
+  name?: string;
+  bio?: string;
+  image?: string;
+  socials?: { label: string; url: string; icon: string }[];
+}
+
+const {
+  name = 'Author',
+  bio = 'Writer and developer.',
+  image = '/avatar.jpg',
+  socials = [],
+} = Astro.props;
+---
+
+<aside class="sidebar">
+  <div class="sidebar-content">
+    <img src={image} alt={name} class="sidebar-avatar" />
+    <p class="sidebar-name">{name}</p>
+    <p class="sidebar-bio">{bio}</p>
+    {socials.length > 0 && (
+      <div class="sidebar-socials">
+        {socials.map(s => (
+          <a href={s.url} target="_blank" rel="noopener noreferrer" aria-label={s.label} class="social-link">
+            <Fragment set:html={s.icon} />
+          </a>
+        ))}
+      </div>
+    )}
+  </div>
+</aside>
+
+<style>
+  .sidebar {
+    width: var(--sidebar-width);
+    flex-shrink: 0;
+  }
+
+  .sidebar-content {
+    position: sticky;
+    top: 2rem;
+    text-align: center;
+  }
+
+  .sidebar-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-name {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-bio {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .sidebar-socials {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--color-border);
+    color: var(--color-text);
+    transition: background 0.2s, color 0.2s;
+  }
+
+  .social-link:hover {
+    background: var(--color-accent);
+    color: white;
+    text-decoration: none;
+  }
+
+  .social-link :global(svg) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .sidebar-content {
+      position: static;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .sidebar-avatar {
+      width: 80px;
+      height: 80px;
+    }
+  }
+</style>

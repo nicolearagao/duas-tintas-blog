@@ -1,0 +1,113 @@
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1a1a;
+  --color-text-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-header-bg: #1a1a1a;
+  --color-header-text: #ffffff;
+  --color-accent: #e63946;
+  --color-accent-professional: #2563eb;
+  --color-link: #e63946;
+  --color-link-hover: #b91c2c;
+  --color-sidebar-bg: #f9fafb;
+  --font-body: 'Georgia', 'Times New Roman', serif;
+  --font-heading: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --max-width: 1100px;
+  --sidebar-width: 280px;
+}
+
+[data-theme="dark"] {
+  --color-bg: #111111;
+  --color-text: #e5e5e5;
+  --color-text-muted: #9ca3af;
+  --color-border: #333333;
+  --color-header-bg: #000000;
+  --color-sidebar-bg: #1a1a1a;
+  --color-link: #f87171;
+  --color-link-hover: #fca5a5;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 18px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.7;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5em;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.25rem; }
+
+p {
+  margin-bottom: 1.2em;
+}
+
+blockquote {
+  border-left: 3px solid var(--color-accent);
+  padding-left: 1.2em;
+  margin: 1.5em 0;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 2em 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+code {
+  font-size: 0.85em;
+  background: var(--color-sidebar-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 3px;
+}
+
+pre {
+  background: var(--color-sidebar-bg);
+  padding: 1.2em;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
