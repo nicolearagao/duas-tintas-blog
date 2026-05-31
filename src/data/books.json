@@ -1,11 +1,29 @@
 [
   {
+    "title": "A Morte de Ivan Ilitch",
+    "author": "Lev Tolstói",
+    "isbn": "9780140449617",
+    "cover": "/covers/a-morte-de-ivan-ilitch.jpg",
+    "url": "https://www.goodreads.com/book/show/18386.The_Death_of_Ivan_Ilych",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "O Amante",
+    "author": "Marguerite Duras",
+    "isbn": "9780394530697",
+    "cover": "/covers/o-amante.jpg",
+    "url": "https://www.goodreads.com/book/show/275.The_Lover",
+    "status": "reading",
+    "year": 2026
+  },
+  {
     "title": "Jane Eyre",
     "author": "Charlotte Brontë",
     "isbn": "9780141441146",
     "cover": "/covers/jane-eyre.jpg",
     "url": "https://www.goodreads.com/book/show/10210.Jane_Eyre",
-    "status": "reading",
+    "status": "read",
     "year": 2026
   },
   {
