@@ -1,0 +1,182 @@
+[
+  {
+    "title": "Jane Eyre",
+    "author": "Charlotte Brontë",
+    "isbn": "9780141441146",
+    "cover": "/covers/jane-eyre.jpg",
+    "url": "https://www.goodreads.com/book/show/10210.Jane_Eyre",
+    "status": "reading",
+    "year": 2026
+  },
+  {
+    "title": "A maravilhosa trama das coisas",
+    "author": "Robin Wall Kimmerer",
+    "isbn": "9786555980455",
+    "cover": "/covers/braiding-sweetgrass.jpg",
+    "url": "https://www.goodreads.com/book/show/17465709-braiding-sweetgrass",
+    "status": "reading",
+    "year": 2025
+  },
+  {
+    "title": "O pobre de direita: a vingança dos bastardos",
+    "author": "Jessé Souza",
+    "isbn": "9786558021551",
+    "cover": "/covers/o-pobre-de-direita.jpg",
+    "url": "https://www.goodreads.com/book/show/219502206-o-pobre-de-direita",
+    "status": "reading",
+    "year": 2026
+  },
+  {
+    "title": "I'm Glad My Mom Died",
+    "author": "Jennette McCurdy",
+    "isbn": "9781982185824",
+    "cover": "/covers/im-glad-my-mom-died.jpg",
+    "url": "https://www.goodreads.com/book/show/59364173-i-m-glad-my-mom-died",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Se Deus me Chamar Não Vou",
+    "author": "Mariana Salomão Carrara",
+    "isbn": "9786555876178",
+    "cover": "/covers/se-deus-me-chamar-nao-vou.jpg",
+    "url": "https://www.goodreads.com/book/show/53014635-se-deus-me-chamar-n-o-vou",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Crash!: Uma Breve História da Economia",
+    "author": "Alexandre Versignassi",
+    "isbn": "9788544105221",
+    "cover": "/covers/crash.webp",
+    "url": "https://www.goodreads.com/book/show/12525961-crash",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Clitemnestra",
+    "author": "Costanza Casati",
+    "isbn": "9781464215872",
+    "cover": "/covers/clitemnestra.jpg",
+    "url": "https://www.goodreads.com/book/show/159514494-clitemnestra",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "A Cidade e As Estrelas",
+    "author": "Arthur C. Clarke",
+    "isbn": "9780451457530",
+    "cover": "/covers/a-cidade-e-as-estrelas.jpg",
+    "url": "https://www.goodreads.com/book/show/250024.The_City_and_the_Stars",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Maria de Padilla: Queen of Souls",
+    "author": "Humberto Maggi",
+    "isbn": "9786599539206",
+    "cover": "/covers/maria-de-padilla.jpg",
+    "url": "https://www.goodreads.com/book/show/25857482-maria-de-padilla",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Condensed Chaos: An Introduction to Chaos Magic",
+    "author": "Phil Hine",
+    "isbn": "9781935150664",
+    "cover": "/covers/condensed-chaos.jpg",
+    "url": "https://www.goodreads.com/book/show/371437.Condensed_Chaos",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Narcissus and Goldmund",
+    "author": "Hermann Hesse",
+    "isbn": "9780553275865",
+    "cover": "/covers/narcissus-and-goldmund.jpg",
+    "url": "https://www.goodreads.com/book/show/5954.Narcissus_and_Goldmund",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Essencialismo",
+    "author": "Greg McKeown",
+    "isbn": "9780804137386",
+    "cover": "/covers/essencialismo.jpg",
+    "url": "https://www.goodreads.com/book/show/18077875-essentialism",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "A Morte É Um Dia Que Vale a Pena Viver",
+    "author": "Ana Cláudia Quintana Arantes",
+    "isbn": "9788543104515",
+    "cover": "/covers/a-morte-e-um-dia-que-vale-a-pena-viver.jpg",
+    "url": "https://www.goodreads.com/book/show/31922986-a-morte-um-dia-que-vale-a-pena-viver",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "A cabeça do santo",
+    "author": "Socorro Acioli",
+    "isbn": "9788535921335",
+    "cover": "/covers/a-cabeca-do-santo.jpg",
+    "url": "https://www.goodreads.com/book/show/20744034-a-cabe-a-do-santo",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "As leis fundamentais da estupidez humana",
+    "author": "Carlo M. Cipolla",
+    "isbn": "9780385546478",
+    "cover": "/covers/as-leis-fundamentais-da-estupidez-humana.jpg",
+    "url": "https://www.goodreads.com/book/show/53291791-as-leis-fundamentais-da-estupidez-humana",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "O Homem Bicentenário",
+    "author": "Isaac Asimov",
+    "isbn": "9780586057001",
+    "cover": "/covers/o-homem-bicentenario.jpg",
+    "url": "https://www.goodreads.com/book/show/11711627-o-homem-bicenten-rio",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Flow: The Psychology of Optimal Experience",
+    "author": "Mihaly Csikszentmihalyi",
+    "isbn": "9780061339202",
+    "cover": "/covers/flow.jpg",
+    "url": "https://www.goodreads.com/book/show/66354.Flow",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Helena",
+    "author": "Machado de Assis",
+    "isbn": "9780195115574",
+    "cover": "/covers/helena.jpg",
+    "url": "https://www.goodreads.com/book/show/46007137-helena-machado-de-assis-livro-3",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Antifragile: Things That Gain from Disorder",
+    "author": "Nassim Nicholas Taleb",
+    "isbn": "9780812979688",
+    "cover": "/covers/antifragile.jpg",
+    "url": "https://www.goodreads.com/book/show/13530973-antifragile",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "O Amante Japonês",
+    "author": "Isabel Allende",
+    "isbn": "9781501116995",
+    "cover": "/covers/o-amante-japones.jpg",
+    "url": "https://www.goodreads.com/book/show/25152052-the-japanese-lover",
+    "status": "read",
+    "year": 2026
+  }
+]

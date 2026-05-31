@@ -1,0 +1,171 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import books from '../data/books.json';
+
+const reading = books.filter(b => b.status === 'reading');
+const read = books.filter(b => b.status === 'read');
+
+const readByYear = read.reduce((acc, book) => {
+  const year = book.year;
+  if (!acc[year]) acc[year] = [];
+  acc[year].push(book);
+  return acc;
+}, {} as Record<number, typeof read>);
+
+const years = Object.keys(readByYear).map(Number).sort((a, b) => b - a);
+---
+
+<BaseLayout title="Leituras — duas tintas" description="O que estou lendo e o que já li." currentPath="/leituras" showSidebar={true}>
+  <section class="leituras">
+    <h1>Leituras</h1>
+
+    {reading.length > 0 && (
+      <section class="reading-section">
+        <h2>Lendo agora</h2>
+        <div class="books-grid">
+          {reading.map(book => (
+            <a href={book.url} target="_blank" rel="noopener noreferrer" class="book-card">
+              <img
+                src={book.cover || `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`}
+                alt={book.title}
+                class="book-card-cover"
+                loading="lazy"
+              />
+              <div class="book-card-info">
+                <p class="book-card-title">{book.title}</p>
+                <p class="book-card-author">{book.author}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
+
+    {years.length > 0 && years.map(year => (
+      <section class="reading-section">
+        <h2>{year}</h2>
+        <div class="books-grid">
+          {readByYear[year].map(book => (
+            <a href={book.url} target="_blank" rel="noopener noreferrer" class="book-card">
+              <img
+                src={book.cover || `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`}
+                alt={book.title}
+                class="book-card-cover"
+                loading="lazy"
+              />
+              <div class="book-card-info">
+                <p class="book-card-title">{book.title}</p>
+                <p class="book-card-author">{book.author}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    ))}
+
+    {reading.length === 0 && years.length === 0 && (
+      <p class="empty-state">Nenhum livro registrado ainda.</p>
+    )}
+
+    <footer class="leituras-footer">
+      <a href="https://www.goodreads.com/user/show/48531180" target="_blank" rel="noopener noreferrer">
+        Ver perfil completo no Goodreads
+      </a>
+    </footer>
+  </section>
+</BaseLayout>
+
+<style>
+  .leituras h1 {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .reading-section {
+    margin-bottom: 2.5rem;
+  }
+
+  .reading-section h2 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .book-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s;
+  }
+
+  .book-card:hover {
+    transform: translateY(-3px);
+    text-decoration: none;
+  }
+
+  .book-card-cover {
+    width: 100px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 0.75rem;
+  }
+
+  .book-card-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 0.25rem;
+  }
+
+  .book-card-author {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+  }
+
+  .empty-state {
+    color: var(--color-text-muted);
+    font-style: italic;
+  }
+
+  .leituras-footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.85rem;
+  }
+
+  .leituras-footer a {
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .leituras-footer a:hover {
+    color: var(--color-accent);
+  }
+
+  @media (max-width: 480px) {
+    .books-grid {
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 1rem;
+    }
+
+    .book-card-cover {
+      width: 80px;
+      height: 120px;
+    }
+  }
+</style>

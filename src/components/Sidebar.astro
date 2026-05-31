@@ -1,4 +1,6 @@
 ---
+import books from '../data/books.json';
+
 interface Props {
   name?: string;
   bio?: string;
@@ -12,6 +14,8 @@ const {
   image = '/avatar.jpg',
   socials = [],
 } = Astro.props;
+
+const currentlyReading = books.filter(b => b.status === 'reading').slice(0, 3);
 ---
 
 <aside class="sidebar">
@@ -26,6 +30,24 @@ const {
             <Fragment set:html={s.icon} />
           </a>
         ))}
+      </div>
+    )}
+    {currentlyReading.length > 0 && (
+      <div class="sidebar-books">
+        <p class="sidebar-books-title">Lendo agora</p>
+        <div class="sidebar-books-grid">
+          {currentlyReading.map(book => (
+            <a href="/leituras" class="book-cover-link" title={book.title}>
+              <img
+                src={book.cover || `https://covers.openlibrary.org/b/isbn/${book.isbn}-M.jpg`}
+                alt={book.title}
+                class="book-cover"
+                loading="lazy"
+              />
+            </a>
+          ))}
+        </div>
+        <a href="/leituras" class="sidebar-books-more">ver leituras</a>
       </div>
     )}
   </div>
@@ -92,6 +114,57 @@ const {
   .social-link :global(svg) {
     width: 18px;
     height: 18px;
+  }
+
+  .sidebar-books {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .sidebar-books-title {
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: 0.75rem;
+  }
+
+  .sidebar-books-grid {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .book-cover-link {
+    display: block;
+    transition: transform 0.2s;
+  }
+
+  .book-cover-link:hover {
+    transform: scale(1.05);
+  }
+
+  .book-cover {
+    width: 50px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 3px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  .sidebar-books-more {
+    display: block;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+  }
+
+  .sidebar-books-more:hover {
+    color: var(--color-accent);
   }
 
   @media (max-width: 768px) {
