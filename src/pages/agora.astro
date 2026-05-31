@@ -1,0 +1,179 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Agora - duas tintas" description="O que está acontecendo na minha vida agora" currentPath="/agora" showSidebar={false}>
+  <div class="now-page">
+    <h1>Agora</h1>
+    <p class="updated">Atualizado em 31 de maio de 2026</p>
+
+    <div class="now-content">
+
+      <section>
+        <h2>Na Toca (Vida na Serra)</h2>
+        <img src="/na-toca.jpg" alt="Nossa futura casa em Albuquerque, Teresópolis" class="now-photo" />
+        <p>
+          <strong>A grande virada:</strong> Compramos a nossa casa dos sonhos em Albuquerque,
+          Teresópolis! Estamos na fase final de documentação e a ansiedade está batendo no teto.
+        </p>
+        <p>
+          <strong>O momento atual:</strong> Dividida entre passar horas no daydreaming planejando o
+          futuro e o medo clássico de "será que vamos dar conta?". Como uma menina criada em
+          apartamento, mudar para uma propriedade semi-rural com espaço para tudo é um universo novo.
+        </p>
+        <p>
+          <strong>As neuras da transição:</strong> Minha mente vai desde os desafios reais (medo dos
+          bichos da serra, logística da manutenção) até as minhas próprias brisas de feiticeira
+          (pensando: "e se a casa vier cheia de encostos?" - o banho de ervas já tá pronto para
+          cantar em cada canto daquela casa). No fundo, sigo esperando a papelada sair para ver
+          como vai ser.
+        </p>
+        <p>
+          Enquanto a papelada não sai, Bilbo e Luna aproveitam o friozinho para cochilos e para
+          sonhar com seu novo quintal.
+        </p>
+        <div class="dog-photos">
+          <img src="/bilbo.jpg" alt="Bilbo dormindo no friozinho da serra" />
+          <img src="/luna.jpg" alt="Luna dormindo no friozinho da serra" />
+        </div>
+      </section>
+
+      <section>
+        <h2>No Trabalho & Tecnologia</h2>
+        <p>
+          <strong>O dilema da IA & Agentic SDLC:</strong> Como todo desenvolvedor do planeta hoje,
+          sigo em uma relação intensa de amor e ódio com inteligência artificial e agentes autônomos.
+          Estou na busca constante de encontrar meu novo lugar nesse cenário, tentando extrair o
+          máximo que a IA tem a oferecer, mas sem abrir mão da minha humanidade no processo.
+        </p>
+        <p>
+          <strong>Os novos gargalos:</strong> Com os agentes gerando código em massa, a revisão virou
+          o meu novo grande bottleneck. Estou tentando entender como lidar com esse aumento insano no
+          consumo de informação e na tomada de decisão sem ter um burnout.
+        </p>
+      </section>
+
+      <section>
+        <h2>Nos Treinos & Corpo</h2>
+        <p>
+          <strong>Powerlifting sem pressão:</strong> Me abstive das competições este ano. O campeonato
+          estadual acontece na semana que vem e resolvi não participar. Decidi tirar o pé do
+          acelerador na intensidade dos treinos para controlar o cortisol e priorizar a longevidade.
+          O BJJ também entrou em pausa por enquanto. Aprender a fazer força continua sendo incrível,
+          mas agora o foco é puramente saúde.
+        </p>
+        <p>
+          <strong>Nutrição & Novo Cutting:</strong> Voltei para a dieta carnívora. Depois de perder
+          16 quilos e passar os últimos três meses focada na manutenção do peso, recalibrei a rota.
+          Estou entrando em um novo processo de cutting que planejo estender pelos próximos 4 ou 5
+          meses, até atingir meu peso alvo.
+        </p>
+      </section>
+
+      <section>
+        <h2>Lendo</h2>
+        <p>
+          Estou devorando <em>A Maravilhosa Trama das Coisas</em>. Esse tem sido particularmente
+          especial porque conversa direto com os temas que têm ocupado minha mente: espiritualidade,
+          a força da natureza e o poder das plantas em si. Ele se conecta muito com os meus sonhos
+          de ter uma horta e construir uma vida mais integrada com a terra em Albuquerque. Estou
+          tirando lições valiosas dali para o meu próprio futuro.
+        </p>
+        <p>
+          Dividindo com o meu esposo a leitura de <em>O Pobre de Direita</em>, do sociólogo Jessé
+          Souza. Estamos gostando muito do livro. Ele disseca como engrenagens profundas da nossa
+          sociedade, como o racismo estrutural e o moralismo religioso, moldam a imaginação política
+          das classes mais empobrecidas.
+        </p>
+      </section>
+
+      <section>
+        <h2>Assistindo</h2>
+        <p>
+          <strong>Maratona de respeito (e análise clínica):</strong> Alucinadamente assistindo
+          <em>The Sopranos</em> pela terceira vez com o meu esposo. Já estamos na season finale e
+          tem sido uma baita experiência antropológica rever tudo com olhares bem mais frescos sobre
+          os personagens.
+        </p>
+        <p>
+          <strong>A queda do mito:</strong> Eu sempre soube que a graça do Tony Soprano era a sua
+          dualidade, mas desta vez estamos achando ele muito pior do que nas últimas vezes. O carisma
+          já não esconde o óbvio: ele é um sociopata, narcisista e extremamente cruel. É fascinante
+          ver como a nossa percepção muda com o tempo.
+        </p>
+      </section>
+
+      <section>
+        <h2>Cozinhando</h2>
+        <p>
+          Estamos completamente obcecados pela nossa panela de pressão. Virou o eletrodoméstico
+          oficial dos fins de semana.
+        </p>
+        <p>
+          <strong>O cardápio:</strong> Na semana passada, fiz um cupim na pressão que desmanchou e
+          virou recheio para sanduíches. Hoje, o meu esposo preparou um arroz com fraldinha que
+          ficou absolutamente dos deuses.
+        </p>
+      </section>
+
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .now-page {
+    max-width: 650px;
+  }
+
+  .now-page h1 {
+    margin-bottom: 0.25rem;
+  }
+
+  .updated {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #888);
+    margin-bottom: 2rem;
+    font-style: italic;
+  }
+
+  .now-content {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .now-content section {
+    margin-bottom: 2rem;
+  }
+
+  .now-content section:last-child {
+    margin-bottom: 0;
+  }
+
+  .now-content h2 {
+    font-size: 1.15rem;
+    text-transform: lowercase;
+    letter-spacing: 0.04em;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+  }
+
+  .now-photo {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  .dog-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-top: 1rem;
+  }
+
+  .dog-photos img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+    aspect-ratio: 3 / 4;
+  }
+</style>
