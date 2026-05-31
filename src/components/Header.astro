@@ -53,6 +53,7 @@ const navLinks = [
     align-items: center;
     height: 60px;
     gap: 2rem;
+    position: relative;
   }
 
   .site-title {
@@ -124,11 +125,33 @@ const navLinks = [
   }
 
   @media (max-width: 600px) {
-    .site-nav {
-      gap: 1rem;
+    .header-inner {
+      flex-wrap: wrap;
+      height: auto;
+      padding: 0.75rem 0;
     }
+
+    .site-title {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 0.5rem;
+    }
+
+    .site-nav {
+      width: 100%;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-left: 0;
+    }
+
     .nav-link {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 0.75rem;
+      right: 0;
     }
   }
 </style>
