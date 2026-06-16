@@ -14,7 +14,7 @@
     "isbn": "9788535914061",
     "cover": "/covers/capitaes-da-areia.jpg",
     "url": "https://www.goodreads.com/book/show/723456.Capit_es_da_areia",
-    "status": "reading",
+    "status": "read",
     "year": 2026
   },
   {
@@ -32,8 +32,8 @@
     "isbn": "9786555980455",
     "cover": "/covers/braiding-sweetgrass.jpg",
     "url": "https://www.goodreads.com/book/show/17465709-braiding-sweetgrass",
-    "status": "reading",
-    "year": 2025
+    "status": "read",
+    "year": 2026
   },
   {
     "title": "O pobre de direita: a vingança dos bastardos",
@@ -41,7 +41,7 @@
     "isbn": "9786558021551",
     "cover": "/covers/o-pobre-de-direita.jpg",
     "url": "https://www.goodreads.com/book/show/219502206-o-pobre-de-direita",
-    "status": "reading",
+    "status": "read",
     "year": 2026
   },
   {
@@ -195,6 +195,51 @@
     "cover": "/covers/o-amante-japones.jpg",
     "url": "https://www.goodreads.com/book/show/25152052-the-japanese-lover",
     "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "Chess Story",
+    "author": "Stefan Zweig",
+    "isbn": "9781590171691",
+    "cover": "/covers/chess-story.jpg",
+    "url": "https://www.goodreads.com/book/show/59151.Chess_Story",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "O Homem em Busca de um Sentido",
+    "author": "Viktor Frankl",
+    "isbn": "9788532606587",
+    "cover": "/covers/o-homem-em-busca-de-um-sentido.jpg",
+    "url": "https://www.goodreads.com/book/show/16114257-o-homem-em-busca-de-um-sentido",
+    "status": "read",
+    "year": 2026
+  },
+  {
+    "title": "A Vida Pela Frente",
+    "author": "Romain Gary",
+    "isbn": "9786555870367",
+    "cover": "/covers/a-vida-pela-frente.jpg",
+    "url": "https://www.goodreads.com/book/show/52652738-a-vida-pela-frente",
+    "status": "reading",
+    "year": 2026
+  },
+  {
+    "title": "Prime Chaos",
+    "author": "Phil Hine",
+    "isbn": "9781935150220",
+    "cover": "/covers/prime-chaos.jpg",
+    "url": "https://www.goodreads.com/book/show/420560.Prime_Chaos",
+    "status": "reading",
+    "year": 2026
+  },
+  {
+    "title": "O Menino do Pijama Listrado",
+    "author": "John Boyne",
+    "isbn": "9788535911121",
+    "cover": "/covers/o-menino-do-pijama-listrado.jpg",
+    "url": "https://www.goodreads.com/book/show/4071158-o-menino-do-pijama-listrado",
+    "status": "reading",
     "year": 2026
   }
 ]
